@@ -6,6 +6,8 @@ package lab4p1_davidpineda;
 
 import java.util.Scanner;
 import LogicaEjercicios.Ejercicio_01;
+import LogicaEjercicios.Ejercicio_02;
+import LogicaEjercicios.Ejercicio_03;
 
 /**
  *
@@ -24,28 +26,38 @@ public class Lab4P1_DavidPineda {
             3. Cofre del tesoro
             0. Salir
 
-            Ingrese opcion de Menu: """;
+            Ingrese opcion de Menu: 
+            """;
 
         System.out.print(menu);
     }
 
     public static int OpcMenu(Scanner leer) {
         int opcion = leer.nextInt();
+        Ejercicio_01 ejecutar = new Ejercicio_01(); 
+        Ejercicio_02 ejecuta = new Ejercicio_02();
+        Ejercicio_03 execute = new Ejercicio_03();
 
         switch (opcion) {
             case 1 -> {
                 
                 System.out.println("Seleccionaste Tragamonedas");
+                Ejercicio_01.jugar();
+                
             }
 
             case 2 -> {
                 
                 System.out.println("Seleccionaste Batallas Navales");
+                Ejercicio_02.jugar();
+                
             }
 
             case 3 -> {
                 
                 System.out.println("Seleccionaste Cofre del tesoro");
+                Ejercicio_03.jugar();
+                
             }
 
             case 0 -> {
